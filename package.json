@@ -1,0 +1,38 @@
+{
+  "name": "diagnostics",
+  "version": "1.0.0",
+  "description": "Diagnostics tool for cloud server",
+  "main": "server.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "child-process": "^1.0.2",
+    "express": "^4.16.2",
+    "hello-cards": "0.0.1",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config webpack/dev.config.js",
+    "start": "node server.js",
+    "build": "npm run copy",
+    "copy": "cp -r src/index.html dist",
+    "deploy": "./bin/deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerico/diagnostics.git"
+  },
+  "author": "garethrobertlee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cerico/diagnostics/issues"
+  },
+  "homepage": "https://github.com/cerico/diagnostics#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.1"
+  }
+}
