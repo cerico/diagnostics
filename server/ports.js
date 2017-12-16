@@ -23,7 +23,10 @@ var theapps = []
 var applines = pids.stdout.toString().split('\n');
 
 applines.forEach(function(line) {
-  var f = {name:line.split(' ')[0],pid:line.split(' ')[1]}
+  var f = {
+    name:line.split(' ')[0],
+    pid:line.split(' ')[1]
+  }
   theapps.push(f)
 })
 
@@ -32,7 +35,10 @@ var lines = nodeports.stdout.toString().split('\n');
               var returnLines = [];
               lines.forEach(function(line) {
      
-              var e = {port:line.split('localhost:').pop().split(' ').shift()}
+              var e = {
+                port:line.split(/\s+/)[8].split(':')[1],
+                pid: line.split(/\s+/)[1]
+              }
               console.log(e)
               returnLines.push(e);
               });
