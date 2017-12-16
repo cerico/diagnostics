@@ -8,7 +8,7 @@ const grep = spawnSync('grep', ['online'],  {
   input: ls.stdout,
   encoding:'utf8'
 })
-const pids = spawnSync('awk', ['{ print $2, ":on pid ",  $8 }'], {
+const pids = spawnSync('awk', ['{ print $2, $8 }'], {
   input: grep.stdout,
   encoding:'utf8'
 })
@@ -19,19 +19,25 @@ const nodeports = spawnSync('grep', ['node'], {
   input: ports.stdout,
   encoding: 'utf8'
 })
-console.log(thenames)
+var theapps = []
+var applines = pids.stdout.toString().split('\n');
+
+applines.forEach(function(line) {
+  var f = {name:line.split(' ')[0],pid:split(' ')[1]}
+  theapps.push(f)
+})
 
 var lines = nodeports.stdout.toString().split('\n');
 
               var returnLines = [];
               lines.forEach(function(line) {
-      console.log(line)
+     
               var e = {port:line.split('localhost:').pop().split(' ').shift()}
               console.log(e)
               returnLines.push(e);
               });
               console.log(23)
-              res.json({ports:returnLines,apps:thenames});
+              res.json({ports:returnLines,apps:theapps});
           }
 
 
