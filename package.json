@@ -16,7 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config webpack/dev.config.js",
     "start": "node server.js",
-    "build": "npm run copy",
+    "build": "webpack --config webpack/prod.config.js && npm run copy",
     "copy": "cp -r src/index.html dist",
     "deploy": "./bin/deploy.sh"
   },
@@ -45,7 +45,9 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.1"

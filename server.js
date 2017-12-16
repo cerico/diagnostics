@@ -1,8 +1,9 @@
 var path = require('path');
 var express = require('express');
 var process = require('child_process');
-
 var app = express();
+
+var inspector = require('./server/ports.js')()
 
 var port=59004
 
@@ -37,16 +38,7 @@ app.get('/static/bundle.js', function(req,res){
 })
 
 app.get('/ports', function(req, res) {
-  const { spawnSync } = require( 'child_process' )
-  const ports = spawnSync('lsof', ['-i'])
-  const nodeports = spawnSync('grep', ['node'], {
-    input: ports.stdout,
-    encoding: 'utf8'
-  })
-  const theports = nodeports.stdout.toString('utf8')
-
-  res.writeHead(200,{'content-type':'text/html'});
-  res.end(theports);
+  inspector.get(req, res)
 });
 
 app.get('/', function(req, res) {
