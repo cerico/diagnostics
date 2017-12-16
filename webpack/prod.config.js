@@ -5,7 +5,7 @@ const baseConfig = require('./base.config.js');
 module.exports = merge(baseConfig(), {
 
       output: {
-        path: path.join(__dirname, '..', 'dist', 'bundle'),
+        path: path.join(__dirname, '..', 'dist', 'static'),
         filename: 'bundle.js',
       }
     })

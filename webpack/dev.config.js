@@ -5,7 +5,7 @@ var path = require('path');
 module.exports = merge(baseConfig(), {
 
     output: {
-      publicPath: "/bundle/",
+      publicPath: "/static/",
       filename: 'bundle.js',
     },
     devtool: 'source-map',

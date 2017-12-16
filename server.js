@@ -32,6 +32,10 @@ console.log('pids')
   res.end(thenames);
 });
 
+app.get('/static/bundle.js', function(req,res){
+  res.sendFile(path.join(__dirname, 'dist', 'static', 'bundle.js'));
+})
+
 app.get('/ports', function(req, res) {
   const { spawnSync } = require( 'child_process' )
   const ports = spawnSync('lsof', ['-i'])
