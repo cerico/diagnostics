@@ -3,11 +3,11 @@ import {CardDesigner} from '../utils/card-designer'
 
 export const getApplications = () => {
   const endpoint = `${API_URL}`
-
+console.log('fetcfffhing')
   return dispatch => {
     return fetch(endpoint)
     .then(response => response.json())
-    .then(res => console.log(res))
+    .then(res => dispatch(setApplications(res)))
     .catch(error => dispatch(setError(error)))
   }
 }

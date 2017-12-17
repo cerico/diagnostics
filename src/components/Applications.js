@@ -26,7 +26,6 @@ class Applications extends React.Component  {
     
     return(
       <div className={styles.grid} style={style.general}>
-      hello
         {this.props.applications.length > 0 ?
           this.props.applications.map((project,i) => <Cardu key={i} card={project}/>)
          : null

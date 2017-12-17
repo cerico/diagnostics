@@ -19,7 +19,7 @@ class App extends React.Component  {
   
   render(){
 
-console.log(22)
+
     return (
       <Router>
         <main>
