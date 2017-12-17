@@ -1,4 +1,10 @@
+// export const randomColour = (product) => {
+//   const colours = ['#3a8738','#223b68', '#387987','#261430',"cornflowerblue"]
+//   return colour = colours[parseInt(Math.random()*5)]
+// }
+
 export const CardDesigner = (products) => {
+  const colours = ['#3a8738','#223b68', '#387987','#261430',"cornflowerblue"]
   let j = products.map(product => {
     // prod.no = "p"
     product.name = product.app;
@@ -7,7 +13,7 @@ product.description = `http://${product.app}.malham.io`;
 product.color =  "#fff";
 product.cols =  2;
 product.direction =  'column';
-product.background =  "cornflowerblue";
+product.background =  colours[parseInt(Math.random()*5)];
 product.url =  `http://${product.app}.malham.io`;
 product.logo =   `http://${window.location.host}/public/roco.png`;
 // product.key =  product.port;
@@ -17,6 +23,7 @@ product.textThree =  `CPU: ${product.cpu}`;
 product.textFour =  `Memory: ${product.mem}`;
 product.textFive =  `Pid: ${product.pid}`;
 product.height = '176px';
+product.z = colours[parseInt(Math.random()*5)]
     return product  
   })
   console.log(j)
