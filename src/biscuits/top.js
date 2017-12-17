@@ -10,11 +10,11 @@ const Top = (props) => {
     marginBottom: '.625rem',
     paddingBottom: 0,
     minHeight: 12,
-    marginTop: '0.75rem'
+    marginLeft: '5%',
   };
 
   var textStyle = {
-    fontSize: '0.85rem',
+    fontSize: '1.15rem',
     marginBottom: '.3rem'
   };
 
