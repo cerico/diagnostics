@@ -38,7 +38,7 @@ app.get('/static/bundle.js', function(req,res){
 })
 
 app.get('/ports', function(req, res) {
-  inspector.get(req, res)
+  inspector.get(req, res);
 });
 
 app.get('/', function(req, res) {
