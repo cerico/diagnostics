@@ -1,5 +1,7 @@
 #Diagnostics
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cerico/diagnostics.svg)](https://greenkeeper.io/)
+
 ## TLDR / What is it?
 
 Application to tell you which applications are running on what ports on your server
