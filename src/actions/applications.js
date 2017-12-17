@@ -7,10 +7,18 @@ export const getApplications = () => {
   return dispatch => {
     return fetch(endpoint)
     .then(response => response.json())
-    .then(res => dispatch(setApplications(res)))
-    .catch(error => console.log(error))
+    .then(res => console.log(res))
+    .catch(error => dispatch(setError(error)))
   }
 }
+
+export const setError = error => {
+  return {
+    type: 'GET_APPLICATIONS_ERROR',
+    payload: error
+  }
+}
+
 
 export const setApplications = res => {
   console.log(res)
