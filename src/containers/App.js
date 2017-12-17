@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 const classNames = require('classnames');
 
+import Layout from '../components/layout/pindex.js';
 import Application from '../components/Application';
 import Applications from '../components/Applications';
 import { getApplications } from '../actions/applications';
@@ -23,7 +24,7 @@ class App extends React.Component  {
     return (
       <Router>
         <main>
-          <Route/>
+          <Route component={Layout}/>
           <div>
             <Switch>
               <Route exact path="/" component={Applications}/>
