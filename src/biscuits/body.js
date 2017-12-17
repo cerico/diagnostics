@@ -21,7 +21,7 @@ const Body = (props) => {
     <div style={whatStyle}>
       <Top {...props}/>
       <Detail {...props}/>
-      <WideLogo logo={props.logo}/>
+      {/* <WideLogo logo={props.logo}/> */}
     </div>
   )
 }

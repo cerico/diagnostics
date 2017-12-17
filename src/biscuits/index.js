@@ -34,7 +34,7 @@ export const Cardu = (props) => {
     return <div style={inner}>
       <Header {...card}/>
       {showData()}
-      <Footer {...card}/>
+      {/* <Footer {...card}/> */}
     </div>
   }
 
