@@ -12,8 +12,8 @@ product.url =  `http://${product.app}.malham.io`;
 product.logo =   `http://${window.location.host}/public/roco.png`;
 // product.key =  product.port;
 product.textOne = `Port: ${product.port}`;
-product.textTwo =  "Redux";
-product.textThree =  "Rails"
+product.textTwo =  `Uptime: ${product.uptime}`;
+product.textThree =  `CPU: ${product.cpu}`
     return product  
   })
   console.log(j)
