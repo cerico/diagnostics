@@ -14,7 +14,8 @@ export const Cardu = (props) => {
 
     const cardStyle = {
       background: card.background,
-      color: card.color      
+      color: card.color  ,
+      height: card.height,    
     };
 
     if (card.url) {

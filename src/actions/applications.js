@@ -27,7 +27,7 @@ export const setApplications = res => {
     console.log(product)
     console.log(21)
     return res.apps.map(p => {
-      if (p.pid === product.pid){
+      if (p.pid === product.pid && !product.port.includes('>')){
         filtered.push({
           app:p.name,
           port:product.port,

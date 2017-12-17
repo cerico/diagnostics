@@ -4,7 +4,10 @@ const Detail = (props) => {
 
   const showThirdCol = function showThirdCol() {
     if (props.cols == 3) {
-      <div></div>
+      <div style={{...section,...borderLeft}}>
+        <div style={label}>{props.textFive}</div>
+        <div style={label}>{props.textSix}</div>
+      </div>
     }
   };
 

@@ -13,7 +13,10 @@ product.logo =   `http://${window.location.host}/public/roco.png`;
 // product.key =  product.port;
 product.textOne = `Port: ${product.port}`;
 product.textTwo =  `Uptime: ${product.uptime}`;
-product.textThree =  `CPU: ${product.cpu}`
+product.textThree =  `CPU: ${product.cpu}`;
+product.textFour =  `Memory: ${product.mem}`;
+product.textFive =  `Pid: ${product.pid}`;
+product.height = '176px';
     return product  
   })
   console.log(j)
