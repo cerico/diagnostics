@@ -35,14 +35,13 @@ export const setApplications = res => {
           mem: p.mem,
           cpu: p.cpu
         })
-      }
-      
+      }      
     })
   })
   console.log(filtered)
   return {
     type: 'GET_APPLICATIONS_SUCCESS',
-    payload: CardDesigner(apps)
+    payload: CardDesigner(filtered)
   }
 }
 
