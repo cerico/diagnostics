@@ -14,21 +14,22 @@ export const getApplications = () => {
   }
 }
 
-export const setApplications = applications => {
-  console.log(applications)
+export const setApplications = res => {
+  console.log(res)
+  const filtered = []
+  res.ports.filter(product => {
+    console.log(product)
+    return res.apps.map(p => {
+      if (p.pid === product.pid){
+        filtered.push({app:p.name,port:product.port})
+      }
+      
+    })
+  })
+  console.log(filtered)
   return {
     type: 'GET_APPLICATIONS_SUCCESS',
-    applications,
+    payload: filtered
   }
 }
 
-// let collection = them.ports.filter(product => {
-//   // return them.apps.filter(p => p.pid === product.pid)
-//   return them.apps.map(p => {
-//     if (p.pid === product.pid){
-//       var t = {app:p.name,port:product.port}
-//       filtered.push(t)
-//     }
-    
-//   })
-// })

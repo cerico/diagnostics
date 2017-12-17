@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 const classNames = require('classnames');
 import styles from './applications.css';
-// import Card from 'hello-cards';
+import Card from 'hello-cards';
 
 class Applications extends React.Component  {
 
@@ -19,16 +19,20 @@ class Applications extends React.Component  {
     }
     return(
       <div className={styles.grid} style={style.general}>
-        {/* {this.props.applicationsu.length > 0 ? 
-          this.props.applications.map((project,i) => <Card key={i} {...project}/>)
+        {this.props.applications.length > 0 ? 
+          this.props.applications.map((project,i) => {
+            return null
+          // return <Card key={i} {...project}/>
+          })
           : null
-        } */}
+        }
       </div> 
     )
   }
 }
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return ({
       applications: state.applications,
     })
