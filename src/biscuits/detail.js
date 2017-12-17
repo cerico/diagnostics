@@ -47,8 +47,8 @@ const Detail = (props) => {
   return (
     <div style={wrapper}>
       <div style={section}>
-        <div style={label}>{props.app}</div>
-        <div style={label}>{props.port}</div>
+        <div style={label}>{props.textOne}</div>
+        <div style={label}>{props.textTwo}</div>
       </div>
       <div style={{...section,...borderLeft}}>
         <div style={label}>{props.textThree}</div>

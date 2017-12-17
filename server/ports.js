@@ -8,7 +8,7 @@ var inspector = function(){
       input: ls.stdout,
       encoding:'utf8'
     });
-    const pids = spawnSync('awk', ['{ print $2, $8 }'], {
+    const pids = spawnSync('awk', ['{ print $2, $8, $14, $16, $18}'], {
       input: grep.stdout,
       encoding:'utf8'
     });
@@ -24,7 +24,10 @@ var inspector = function(){
     applines.forEach(function(line) {
       var f = {
         name:line.split(' ')[0],
-        pid: line.split(' ')[1]
+        pid: line.split(' ')[1],
+        uptime: line.split(' ')[2],
+        cpu: line.split(' ')[3],
+        mem: line.split(' ')[4]
     }
     theapps.push(f)
   })

@@ -11,31 +11,37 @@ export const getApplications = () => {
     type: 'GET_APPLICATIONS_SUCCESS',
     payload: CardDesigner(apps)
   }
-  // return dispatch => {
-  //   return fetch(endpoint)
-  //   .then(response => response.json())
-  //   .then(res => dispatch(setApplications(res)))
-  //   // .then(res => dispatch(setApplications(res.Applications)))
-  //   .catch(error => console.log(error))
-  // }
+  return dispatch => {
+    return fetch(endpoint)
+    .then(response => response.json())
+    .then(res => dispatch(setApplications(res)))
+    // .then(res => dispatch(setApplications(res.Applications)))
+    .catch(error => console.log(error))
+  }
 }
 
-// export const setApplications = res => {
-//   console.log(res)
-//   const filtered = []
-//   res.ports.filter(product => {
-//     console.log(product)
-//     return res.apps.map(p => {
-//       if (p.pid === product.pid){
-//         filtered.push({app:p.name,port:product.port})
-//       }
+export const setApplications = res => {
+  console.log(res)
+  const filtered = []
+  res.ports.filter(product => {
+    console.log(product)
+    return res.apps.map(p => {
+      if (p.pid === product.pid){
+        filtered.push({
+          app:p.name,
+          port:product.port,
+          uptime: p.uptime,
+          mem: p.mem,
+          cpu: p.cpu
+        })
+      }
       
-//     })
-//   })
-//   console.log(filtered)
-//   return {
-//     type: 'GET_APPLICATIONS_SUCCESS',
-//     payload: filtered
-//   }
-// }
+    })
+  })
+  console.log(filtered)
+  return {
+    type: 'GET_APPLICATIONS_SUCCESS',
+    payload: filtered
+  }
+}
 
