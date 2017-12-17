@@ -30,17 +30,18 @@ applines.forEach(function(line) {
   theapps.push(f)
 })
 
-var lines = nodeports.stdout.toString().split('\n');
+var lines = nodeports.stdout.toString().split('\n')
 
               var returnLines = [];
               lines.forEach(function(line) {
-     
-              var e = {
-                port:line.split(/\s+/)[8].split(':')[1],
-                pid: line.split(/\s+/)[1]
+              if (line.length > 0 ) {
+                var e = {
+                  port:line.split(/\s+/)[8].split(':')[1],
+                  pid: line.split(/\s+/)[1]
+                }
+                console.log(e)
+                returnLines.push(e);
               }
-              console.log(e)
-              returnLines.push(e);
               });
               console.log(23)
               res.json({ports:returnLines,apps:theapps});
