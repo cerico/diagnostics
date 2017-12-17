@@ -21,3 +21,14 @@ export const setApplications = applications => {
     applications,
   }
 }
+
+// let collection = them.ports.filter(product => {
+//   // return them.apps.filter(p => p.pid === product.pid)
+//   return them.apps.map(p => {
+//     if (p.pid === product.pid){
+//       var t = {app:p.name,port:product.port}
+//       filtered.push(t)
+//     }
+    
+//   })
+// })
