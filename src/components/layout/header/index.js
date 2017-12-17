@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './header.css';
 
 const classNames = require('classnames');
@@ -42,16 +43,15 @@ const Header = () => {
           <nav>
             <ul style={navItems}>
               <li style={navItem}>
-                <a href="/">diagnostics</a>
+                <Link to="/">diagnostics</Link>
               </li>
               <li style={navItem}>
-                <a href="/about">about</a>
+                <Link to="/about">about</Link>
               </li>
             </ul>
           </nav>
         </div>
     </header>
-
 	);
 
 }
