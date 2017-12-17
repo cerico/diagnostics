@@ -19,7 +19,7 @@ class App extends React.Component  {
   
   render(){
 
-
+console.log(22)
     return (
       <Router>
         <main>
@@ -36,11 +36,5 @@ class App extends React.Component  {
   }
 }
 
-const mapStateToProps = (state) => {
-  return ({
-      applications: state.applications
-    })
-}
-
-export default connect(mapStateToProps, {getApplications})(App);
+export default connect(null, {getApplications})(App);
 
