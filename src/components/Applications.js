@@ -8,8 +8,8 @@ import {CardDesigner} from '../utils/card-designer'
 class Applications extends React.Component  {
 
   render (){
-console.log(12)
-    let apps = [{app:'oslo',port:28,url:"y"},{url:"z",app:'malmo',port:61}]
+    console.log("G")
+
     let display
     this.props.location.pathname === '/' ?
       display = 'flex' :
