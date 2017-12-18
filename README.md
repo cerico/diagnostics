@@ -1,4 +1,4 @@
-#Diagnostics
+# Diagnostics
 
 ![screenshot](https://s3.eu-west-2.amazonaws.com/io1937/screenshots/diagnostics.jpeg)
 
