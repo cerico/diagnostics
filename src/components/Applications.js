@@ -2,13 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 const classNames = require('classnames');
 import styles from './applications.css';
-import {Cardu} from '../biscuits/index.js';
+import {Cardu} from '../mini-cards';
 import {CardDesigner} from '../utils/card-designer'
 
 class Applications extends React.Component  {
 
   render (){
-    console.log("G")
 
     let display
     this.props.location.pathname === '/' ?

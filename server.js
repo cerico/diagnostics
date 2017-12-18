@@ -1,7 +1,10 @@
 var path = require('path');
 var express = require('express');
+const history = require('connect-history-api-fallback')
 var process = require('child_process');
 var app = express();
+const staticFileMiddleware = express.static('dist');
+
 
 var inspector = require('./server/ports.js')()
 
@@ -44,6 +47,14 @@ app.get('/ports', function(req, res) {
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
   });
+
+app.use(staticFileMiddleware);
+app.use(history({
+  disableDotRule: true,
+  verbose: true
+}));
+app.use(staticFileMiddleware);
+  
 
 app.listen(port, 'localhost', function(err) {
   if (err) {

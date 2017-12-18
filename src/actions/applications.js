@@ -21,11 +21,8 @@ export const setError = error => {
 
 
 export const setApplications = res => {
-  console.log(res)
   const filtered = []
   res.ports.filter(product => {
-    console.log(product)
-    console.log(21)
     return res.apps.map(p => {
       if (p.pid === product.pid && !product.port.includes('>')){
         filtered.push({
