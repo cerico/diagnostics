@@ -1,5 +1,8 @@
 #Diagnostics
 
+![screenshot](https://s3.eu-west-2.amazonaws.com/io1937/screenshots/diagnostics.jpeg)
+
+
 ## TLDR / What is it?
 
 Application to tell you which applications are running on what ports on your server
