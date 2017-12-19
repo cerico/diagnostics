@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 const classNames = require('classnames');
 import styles from './applications.css';
-import Cardu from 'hello-cards';
+import Card from 'hello-cards';
 import {CardDesigner} from '../utils/card-designer'
 
 class Applications extends React.Component  {

@@ -13,7 +13,6 @@ export const CardDesigner = (products) => {
     product.textTwo =  `Uptime: ${product.uptime}`;
     product.textThree =  `CPU: ${product.cpu}`;
     product.textFour =  `Memory: ${product.mem}`;
-    product.textFive =  `Pid: ${product.pid}`;
     product.mini = true
     return product  
   })
