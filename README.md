@@ -1,4 +1,7 @@
-#Diagnostics
+# Diagnostics
+
+![screenshot](https://s3.eu-west-2.amazonaws.com/io1937/screenshots/diagnostics.jpeg)
+
 
 ## TLDR / What is it?
 
@@ -12,8 +15,8 @@ I'm using pm2 to run the node apps, and nginx to proxy them. This application ba
 
 ## What does it do so far?
 
-There are 3 main views, an index view, a pid view and a port view. the pm2 list command shows you the app name and the pid, the port view shows you the pid and the port. Couldn't see how to get the app name and the port at same time.
+Shows the cpu, memory usage, uptime and port number of each application currently under pm2 control
 
 ## What will it do eventually?
 
-So there's no front end at app yet, just a static index.html with links to two server rendered views (pids, ports). Next up is to build a react piece, which will join the two server calls together into a nice object to display on screen, then some d3 to do a chart of some kind with it 
+Websockets? d3?
