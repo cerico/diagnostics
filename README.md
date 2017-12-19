@@ -20,3 +20,31 @@ Shows the cpu, memory usage, uptime and port number of each application currentl
 ## What will it do eventually?
 
 Websockets? d3?
+
+## Yes, but how do I run it
+
+Its pretty bespoke at the minute, it only works if you have your applications under pm2 control
+
+```
+make dev
+```
+
+This runs the dev build but the page will be blank as it needs the server to be running to have any data to process.
+
+```
+make start
+```
+
+This runs the prod build, it will run on your mac or local machine, but unless you're running pm2 locally there will still be nothing to show
+
+```
+make build
+```
+
+Builds the bundle ready for deployment, including all the client side packages
+
+```
+make deploy
+```
+
+Deploys to the target machine, in this case a digital ocean droplet.
