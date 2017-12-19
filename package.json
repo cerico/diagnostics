@@ -42,7 +42,7 @@
     "babel-preset-stage-1": "^6.0.15",
     "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "6.26.0",
-    "hello-cards": "^0.1.5",
+    "hello-cards": "^0.1.11",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
