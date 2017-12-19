@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 const classNames = require('classnames');
 import styles from './applications.css';
-import {Cardu} from '../mini-cards';
+import Cardu from 'hello-cards';
 import {CardDesigner} from '../utils/card-designer'
 
 class Applications extends React.Component  {
@@ -26,7 +26,7 @@ class Applications extends React.Component  {
     return(
       <div className={styles.grid} style={style.general}>
         {this.props.applications.length > 0 ?
-          this.props.applications.map((project,i) => <Cardu key={i} card={project}/>)
+          this.props.applications.map((app,i) => <Card key={i} product={app}/>)
          : null
          }
       </div> 
