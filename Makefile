@@ -5,4 +5,4 @@ start:
 build:
 	npm run build
 deploy:
-	./bin/deploy.sh
+	npm run build && ./bin/deploy.sh
