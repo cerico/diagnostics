@@ -18,24 +18,6 @@ app.get('/public/*', function(req,res){
   res.sendFile(path.join(__dirname, 'dist', 'public', req.params[0]));
 })
 
-app.get('/pids', function(req, res) {
-console.log('pids')
-  const { spawnSync } = require( 'child_process' )
-  const ls = spawnSync( 'pm2', ['list'] )
-  const grep = spawnSync('grep', ['online'],  {
-    input: ls.stdout,
-    encoding:'utf8'
-  })
-  const pids = spawnSync('awk', ['{ print $2, ":on pid ",  $8 }'], {
-    input: grep.stdout,
-    encoding:'utf8'
-  })
-  const thenames = pids.stdout.toString('utf8')
-
-  res.writeHead(200,{'content-type':'text/html'});
-  res.end(thenames);
-});
-
 app.get('/static/bundle.js', function(req,res){
   res.sendFile(path.join(__dirname, 'dist', 'static', 'bundle.js'));
 })
