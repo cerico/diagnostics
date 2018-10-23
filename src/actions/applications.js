@@ -1,4 +1,4 @@
-const API_URL = `http://${window.location.host}/ports`
+const API_URL = `https://${window.location.host}/ports`
 import {CardDesigner} from '../utils/card-designer'
 
 export const getApplications = () => {
