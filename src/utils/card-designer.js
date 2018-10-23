@@ -3,12 +3,12 @@ export const CardDesigner = (products) => {
   let app = products.map(product => {
     product.name = product.app;
     product.page =  '/rocogo';
-    product.description = `http://${product.app}.malham.io`;
+    product.description = `http://${product.app}.${window.location.host}`;
     product.color =  "rgb(249, 247, 238)";
     product.cols =  3;
     product.direction =  'column';
     product.background =  colours[parseInt(Math.random()*5)];
-    product.url =  `http://${product.app}.malham.io`;
+    product.url =  `http://${product.app}.${window.location.host}`;
     product.textOne = `Port: ${product.port}`;
     product.textTwo =  `Uptime: ${product.uptime}`;
     product.textThree =  `CPU: ${product.cpu}`;
