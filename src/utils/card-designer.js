@@ -3,12 +3,12 @@ export const CardDesigner = (products) => {
   let app = products.map(product => {
     product.name = product.shortname;
     product.page =  '/rocogo';
-    product.description = product.app;
+    product.description = `https://${product.app}`;
     product.color =  "rgb(249, 247, 238)";
     product.cols =  3;
     product.direction =  'column';
     product.background =  colours[parseInt(Math.random()*5)];
-    product.url =  product.app;
+    product.url =  `https://${product.app}`;
     product.textOne = `Port: ${product.port}`;
     product.textTwo =  `Uptime: ${product.uptime}`;
     product.textThree =  `CPU: ${product.cpu}`;
