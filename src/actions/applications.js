@@ -30,7 +30,8 @@ export const setApplications = res => {
           port:product.port,
           uptime: p.uptime,
           mem: p.mem,
-          cpu: p.cpu
+          cpu: p.cpu,
+          shortname: p.name.split('.')[0]
         })
       }      
     })
