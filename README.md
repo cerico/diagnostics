@@ -51,4 +51,4 @@ Deploys to the target machine, in this case a digital ocean droplet.
 
 ## Nice, can I read more about it somewhere?
 
-You can! There's a blog piece on the setup at https://io37.ga/posts/2017-12-19---diagnostics/
+You can! There's a blog piece on the setup at https://cerico.github.io/posts/2017-12-19---diagnostics/
