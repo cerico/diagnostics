@@ -35,7 +35,6 @@ class Applications extends React.Component  {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return ({
       applications: state.applications,
     })
