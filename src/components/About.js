@@ -55,7 +55,7 @@ class About extends React.Component  {
 
         <h1 style={style.header}>How it works</h1>
 
-        <span style={style.blurb}>The code is available at <a style={style.link} href="http://github.com/cerico/diagnostics">github</a> - and for a fuller explanation of how it works there is a blog post at <a href="https://io37.ga/posts/2017-12-19---diagnostics/">https://io37.ga</a></span>
+        <span style={style.blurb}>The code is available at <a style={style.link} href="http://github.com/cerico/diagnostics">github</a> - and for a fuller explanation of how it works there is a blog post at <a href="https://cerico.github.io/posts/2017-12-19---diagnostics/">https://cerico.github.io</a></span>
 
 
         <h1 style={style.header}>Server</h1> 
