@@ -1,5 +1,7 @@
 # Diagnostics
 
+[![updown](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fdiagnostics.yesmat.es)](https://img.shields.io/website?style=for-the-badge&url=https%3A%2F%2Fdiagnostics.yesmat.es)
+
 ![screenshot](https://s3.eu-west-2.amazonaws.com/io1937/screenshots/diagnostics.jpeg)
 
 
